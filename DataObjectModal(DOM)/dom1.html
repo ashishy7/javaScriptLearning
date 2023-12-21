@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<p>here we going to learn how to change dom element by get element by if 
+    window - global object 
+    window has the document object assosicate with it 
+    so you can access any thing in that page using this.document
+    there are two way of accessing elements
+    1. By Id
+    2. By ClassName
+    let x = document.getElementById(""); // returns one element
+    // or null if not found
+    let y = document.getElementsByClassName(); // return node list
+    // even if no match found it will still return a collection with length zero
+    document.getElementById("here we give id name").innerHTML=<h1> put your text to change whole html tag</h1>
+    // methods available for both
+    appendChild() : adds child at end
+    removeChild(): removes child from parent
+    createElement(tagname): creates new element and returns it
+    setAttribute(attrname,value) : sets attribute value
+    innerHTML : gets/sets all content inside an element (including HTML tags)
+    textContent : gets/set sall text inside an element (excluding HTML tags)
+    style : used to add styles dynamically to an element
+    querySelector(selector) : returns first matching element
+    querySelectorAll(selector) : returns a node list containing all matches
+    of selectors
+
+    
+</p>

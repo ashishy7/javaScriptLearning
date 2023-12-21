@@ -1,0 +1,52 @@
+javascript and classes
+OOP
+
+
+Object
+collection of properties and methods
+
+toLowerCase
+
+why use OOP
+- reusability
+- modularity
+- organization
+Classes vs Objects:
+Objects are instances of a class. Classes define the blueprint for creating objects (a template).
+A single class can produce many different objects, each with its own unique state.
+Class Syntax:  
+class MyClass {
+    // code here
+    }   
+    Properties:
+    Properties are defined by placing variable declarations inside curly braces following the "class" keyword.
+    Properties are defined by placing variable declarations inside curly braces {} in the body of the class declaration.
+    - Methods: functions that belong to an object
+    - Attributes/Properties: data stored in an object
+     
+
+parts of OOP
+1. Class Definition 
+2. Instance Creation
+3. Property Accessors
+
+Object literal
+{
+    propertyName : value,
+    }
+    In JavaScript, you don't need to declare your variables before using them like you do in some other languages. You just write down what
+
+
+Constructor function
+
+Prototypes
+Classes
+Instances (new, this)
+
+
+4 pillars
+Abstraction-- fetch(callback) this the one of the best example of Abstraction, all the process of calling api then working on them 
+with rsolve and reject. define -- hide the implementation from the user 
+Encapsulation -- wrapp the class or object 
+Inheritance-
+Polymorphism-- one method with many forms -- example --console.log() 

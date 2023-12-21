@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHitesh = function(){
+        console.log("Hitesh");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+    //we have to store the setTimeout reference in the variable to make sure we have the value to clear it out after our work
+
+    const changeMe = setTimeout(changeText, 2000)//---changeText is called handler or reference to the functuion variable
+         //clearTimeout(ChangeMe)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>

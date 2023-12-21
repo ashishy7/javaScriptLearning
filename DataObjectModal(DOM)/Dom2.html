@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent) // Outputs the HTMLDivElement with class "parent".
+    const days = document.getElementsByClassName('day');
+    console.log(days); // Outputs an HTMLCollection of all elements in .parent with class "day".
+    // Accessing individual elements by index
+    console.log(days[0]);
+    // Accessing last element
+    console.log(days[days.length - 1])
+
+
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    console.log("NODES: ", parent.childNodes);
+</script>
+</html>
+
+<p>
+
+    1. getter and setter method for the getElementById
+    document.getElementById('id'),getAttribute('id')--use to get all the attribute of the html tag which id is provided
+    document.getElementById('id').setAttribute('class','newClass')-- use to set the attribute of the tag
+    -- use to add or remove classes from the tag
+
+    2. querySelectorAll returns NodeList not HTML Collection, it's like an array but not exactly
+    It has more properties and methods than HTML collection
+    3. nextElementSibling only works if there are siblings that come after the current node
+    If we have no siblings coming after us then it will return null
+    4. firstElementChild & lastElementChild also work on a textNode
+    The childNodes property includes everything including comments, text nodes etc.
+    So these two properties exclude any non-element child nodes
+
+
+    It has some differences though. For example, you can call methods on it that you can’t call on an HTML collection.
+    It has more properties and methods than HTML collection
+    For example : length , item() , namedItem() etc..
+    We can access each node using indexing as well as we do with html collections
+
+    2. The Element.className property represents the class attribute of an HTML element. It can be used to read or change the value of this
+    2. The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document, including data from
+
+    The `getElementById` method returns the first Element within the document that has the ID attribute with the specified value. If there are multiple elements
+    2. querySelector() returns only first occurance of the selector
+    3. querySelectorAll() returns NodeList which can be iterated using forEach(), Array methods or as an array itself.
+    3. querySelectorAll() returns NodeList which contains collection of nodes
+    that matches the selectors, it can be iterated using forEach loop or array methods like map(), filter()...etc
+    that match the selectors, it can be iterated using forEach(), Array methods etc.
+    For example :   
+<p>
+
+    difference between inntext,innerContent,innerHTML
+    - innerHTML : It returns the HTML markup of the element's content along with its descendants. If there are no child nodes
+    inntext
+    - it will return the text inside an element including its children elements
+    innerContent
+    - it will return the text and HTML inside an element but not include the child nodes
+</p>
+
+   
+<p>
+These all return either a single element or collection of elements, but get them different ways:
+
+querySelector - returns the first single element in the document that matches the CSS-type selector
+querySelectorAll- returns a collection of all elements(NodeList)in the document that match the selector
+getElementsByClassName-returns a collection of elements (HTMLCollection) that have the specified class (not a selector)
+getElementById*-returns the single element in the document that has the specified ID (there can only be one)
+getElementsbyTagName- returns a collection of elements that have the specified tag name (type)
+
+</p>
+  how to convert HTMLCollection to array
+  temp= holding the HTMLCollection
+  2 way to convert
+  var arr = [...document.getElementsByTagName("div")]
+  var arr= Array.form(temp)
+  after coverting to array what method we can use
+  arr.forEach()
+  arr[0]
+
+</p>
